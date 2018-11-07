@@ -1,12 +1,13 @@
-Table of Contents
-=================
 
-   * [Cash chain](#cash-chain)
-      * [Why this is important and how it's relevant to our case -- how banks work?](#why-this-is-important-and-how-its-relevant-to-our-case----how-banks-work)
-      * [Electronic payment](#electronic-payment)
-      * [The system: EBS pride](#the-system-ebs-pride)
-      * [The cash chain: Where's our money!](#the-cash-chain-wheres-our-money)
-      * [Democratizing our e-payment: Beyond E15 realm](#democratizing-our-e-payment-beyond-e15-realm)
+- [Cash chain](#cash-chain)
+   - [Why this is important and how it's relevant to our case -- how banks work?](#why-this-is-important-and-how-its-relevant-to-our-case----how-banks-work)
+   - [Electronic payment](#electronic-payment)
+   - [The system: EBS pride](#the-system-ebs-pride)
+   - [The cash chain: Where's our money!](#the-cash-chain-wheres-our-money)
+   - [Democratizing our e-payment: Beyond E15 realm](#democratizing-our-e-payment-beyond-e15-realm)
+- [Rethink the system: Let's go beyond EBS and 1SDG transaction fees](#rethink-the-system-lets-go-beyond-ebs-and-1sdg-transaction-fees)
+   - [About EBS](#about-ebs)
+- [noebs](#noebs)
 
 # Cash chain
 _Bear in mind this is a work in-progress. I will keep this repo updated_.
@@ -54,3 +55,25 @@ Now the banks are in utter need to have as much POS as they can afford, they've 
 
 
 ![cash_flow](cash_flow.png)
+The idea is that in order to fully implement an e-paymeny system, we have to secure the cash chain, or the way the cash representer, these claims we took from the system, to propagate smoothly through all of the system parts. If I can use my credit card to make my payments from a local grocery, but the grocery owner cannot use their cards to refill their storage, the system fails.
+
+# Rethink the system: Let's go beyond EBS and 1SDG transaction fees
+I have a strong believe that electronic payment _will_ help our community. And I also believe that we are lacking a clear _vision_. I'm not here to offer solutions as much as highlighting the current issues.
+- make the transaction fees model more dynamic for small transactions, e.g., buses fees, grocery, etc. (It is quite unacceptable that one must pay 1SDG for each time they ride a bus.)
+- ensure that the electronic system covers all of the supply chain and there's no any broken chains
+- build small businesses around electronic payment, e.g., ecommerce
+
+## About EBS
+I've some opionions about the way EBS runs the national switch. I will start off by writting my opinions on the national switch operator.
+- i adopt separation of responsibilites philsophy. A pen is meant to do writing, I don't expect it to be used in any other regard. EBS is meant only as the national switch operator, it is quite unexpectedly for me that they have a marketing and a business development team. _It is the responsibility of their clients to have a business model and a marketing plan_.
+- EBS is a solid point to start with, always put that in mind. It is quite irrational to start your own switch.
+- the separation between merchant and consumer channels at EBS is ridiculous and adds another burden. Has no _security_ implications either.
+- EBS role must be cleared out.
+
+# noebs
+What is noebs? It is definitely not a replacement for EBS, if anything we embrace the use of EBS and its role as a unified switching system. But, we aim to provide a thin wrapper around EBS functionalities. It is free and open source built using Go. noebs encapsulates many of the things I learned while working with another full fledged payment gateway. It is very fast and robust and doesn't get on your way while using it. One of the things we learned while working with embedded devices is that both our engineers, as well as the machines, don't like fancy JWT headers. Actually, one of our machine cannot even send a request body with that size! It is the application's responsibility to do their authentication systems and other kinda of business logic.
+- Extremely fast backend. It can happily serve more than 60k requests/sec [Techempower benchmark results.](https://www.techempower.com/benchmarks/) 
+- A simplistic middleware that doesn't intend to get into your way. This system is meant to do one thing and one thing only, serves as a payment gateway interface to EBS and other payment interfaces.
+- Totally open source and free! You can really just fork the repo and use it on your own infrastructure!
+- Other support plans too. We can provide this software as a SaaS, or even a PaaS, where we handle all of the server and configurations for you, and add other features as needed.
+- We have our own EBS simulator too that is 100% compatible with EBS development server! And it works on holidays too!
