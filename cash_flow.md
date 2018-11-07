@@ -1,3 +1,13 @@
+Table of Contents
+=================
+
+   * [Cash chain](#cash-chain)
+      * [Why this is important and how it's relevant to our case -- how banks work?](#why-this-is-important-and-how-its-relevant-to-our-case----how-banks-work)
+      * [Electronic payment](#electronic-payment)
+      * [The system: EBS pride](#the-system-ebs-pride)
+      * [The cash chain: Where's our money!](#the-cash-chain-wheres-our-money)
+      * [Democratizing our e-payment: Beyond E15 realm](#democratizing-our-e-payment-beyond-e15-realm)
+
 # Cash chain
 _Bear in mind this is a work in-progress. I will keep this repo updated_.
 
@@ -38,6 +48,9 @@ Well... apparently all of these are actually possible now. But, this doesn't sou
 - pay to the tea/coffee ma'am you hangout with (during office hours)
 - pay to your fatta and flafel
 - the lame nearby (small) grocery you buy sugar and milk from?
+
 Mmm, good luck with that. The idea is not about these only, it is about the small, yet, very often things you want to do. _This system is not personalized to our use_.
 Now the banks are in utter need to have as much POS as they can afford, they've started tackling some of these problems. They put huge investment into distributing their POS into as many supermarkets as they can afford. That, will result in some revenue for them. However, there's no worse than a half-baked experience. The only way to convince a merchant (be it a supermarket or any other agent) to use your POS as a payment method is to ensure to them _that they can withdraw any amount of moeny they have_. And that's not possible. No one with their right mind can give you their money while they cannot have access to it. What we want is something like this:
 
+
+![cash_flow](cash_flow.png)
